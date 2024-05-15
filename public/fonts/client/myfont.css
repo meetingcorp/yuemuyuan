@@ -1,0 +1,97 @@
+@media only screen and (max-width: 1500px) {
+    #mainMenu nav > ul > li > a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #mainMenu nav > ul > li > a {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 1290px) {
+    #mainMenu nav > ul > li > a {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 1235px) {
+    #mainMenu nav > ul > li > a {
+        font-size: 13px !important;
+    }
+}
+
+@media only screen and (max-width: 1198px) {
+    #mainMenu nav > ul > li > a {
+        font-size: 13px !important;
+    }
+}
+
+body {
+    font-family: 'Prompt', sans-serif !important;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,button,stronga,p,a,span  {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+.main-header .logo {
+    font-family: 'Prompt', sans-serif;
+}
+
+#mainMenu nav > ul > li > a {
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #footer{
+        margin-bottom: 0px;
+    }
+    #mainMenu nav > ul > li > a {
+        font-size: 16px !important;
+    }
+    #footer-fixed-navigation{
+        display: block !important;
+    }
+
+    #scrollTop{
+        bottom: 70px !important;
+        right: 5px !important;
+    }
+}
+
+@media only screen and (max-width: 887px) {
+    #topbar{
+        display: none;
+    }
+}
+
+#footer-fixed-navigation{
+    border-top: 2px #d0d0d0 solid;
+    z-index: 99;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
