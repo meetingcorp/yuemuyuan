@@ -19,7 +19,7 @@ Route::get('/aboutus', function(){
     return view('client.yuemu.aboutsu.index', compact('aboutus'));
 });
 Route::get('/news', function(){
-    $news = App\Models\News::where([['publish', 1]])->orderBy('sort', 'asc')->skip(0)->take(12)->get();
+    $news = App\Models\News::where([['publish', 1]])->orderBy('sort', 'asc')->skip(0)->take(100)->get();
     return view('client.yuemu.news.index', compact('news'));
 });
 Route::get('/news/{news}', function(App\Models\News $news){
@@ -28,7 +28,7 @@ Route::get('/news/{news}', function(App\Models\News $news){
 })->name('client.news.show');
 
 Route::get('/service', function(){
-    $service = App\Models\Services::where('publish', 1)->orderBy('sort', 'asc')->skip(0)->take(12)->get();
+    $service = App\Models\Services::where('publish', 1)->orderBy('sort', 'asc')->skip(0)->take(100)->get();
     return view('client.yuemu.service.index', compact('service'));
 });
 Route::get('/service/{service}', function(App\Models\Services $service){
@@ -37,11 +37,11 @@ Route::get('/service/{service}', function(App\Models\Services $service){
 })->name('client.service.show');
 
 Route::get('/review', function(){
-    $reviews = App\Models\Review::where([['publish', 1]])->orderBy('sort', 'asc')->skip(0)->take(12)->get();
+    $reviews = App\Models\Review::where([['publish', 1]])->orderBy('sort', 'asc')->skip(0)->take(100)->get();
     return view('client.yuemu.review.index', compact('reviews'));
 });
 Route::get('/article', function(){
-    $articles = App\Models\Article::where([['publish', 1]])->orderBy('sort', 'asc')->skip(0)->take(12)->get();
+    $articles = App\Models\Article::where([['publish', 1]])->orderBy('sort', 'asc')->skip(0)->take(100)->get();
     return view('client.yuemu.article.index', compact('articles'));
 });
 Route::get('/article/{article}', function(App\Models\Article $article){
