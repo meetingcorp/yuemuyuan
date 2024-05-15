@@ -173,7 +173,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/dropzone/delete', [App\Http\Controllers\Admin\DropzoneController::class, 'deleteupload'])->name('dropzone.delete');
     });
 });
-Route::get('/foo', function () {
+Route::get('/storage_link', function () {
     Artisan::call('storage:link');
 });
 
