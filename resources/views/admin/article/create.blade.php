@@ -56,7 +56,7 @@
                         <div class="float-right">
                             <a class='btn btn-secondary' onclick='history.back();'><i
                                     class="fas fa-arrow-left mr-2"></i>ย้อนกลับ</a>
-                            <button class='btn btn-info'><i class="fas fa-save mr-2"></i>บันทึก</button>
+                            <button id="btnsubmit" class='btn btn-info'><i class="fas fa-save mr-2"></i>บันทึก</button>
                         </div>
                     </div>
                 </div>
@@ -69,6 +69,26 @@
             $('#detail').summernote({
                 height: 400
             });
+
+            imgInp.onchange = evt => {
+                const [file] = imgInp.files;
+                if (file) {
+                    validateupload('imgInp');
+                    showimg.src = URL.createObjectURL(file);
+                }
+            }
+
+            function validateupload(id) {
+                let dataimg = document.getElementById(id);
+                let FileUploadPath = dataimg.value;
+                let Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+                // console.log(Extension);
+                if (Extension == "gif" || Extension == "png" || Extension == "jpeg" || Extension == "jpg") {
+                    $('#btnsubmit').prop('disabled', false);
+                } else {
+                    $('#btnsubmit').prop('disabled', true);
+                }
+            }
         </script>
     @endpush
 @endsection
