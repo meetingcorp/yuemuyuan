@@ -1,13 +1,13 @@
 <header id="header" data-transparent="false" class="white header-logo-center">
     <div class="header-inner">
-		
+
         <div class="container" style="background-color: #035747">
 			<div class="header-extras" style="float: right;">
 			<div class="d-block d-sm-none mt-4 mb-1 social-icons social-icons-border social-icons-colored-hover social-icons-rounded right" style="margin-right:-10px;">
                             <ul>
 								 <li class="social-gplus"><a class="text-white" target="_blank"
                                         href="tel:{{ setting('tel1') }}"
-                                        style="margin-top:3px; margin-right:3px; margin-left:3px;"><i class="fas fa-phone-alt"
+                                        style="margin-top:3px; margin-right:3px; margin-left:3px;"><i class="fas fa-phone"
                                             aria-hidden="true"></i></a></li>
                                 <li class="social-facebook"><a class="text-white" target="_blank" href="{{ setting('facebook_info') }}"
                                         style="margin-top:3px; margin-right:3px; margin-left:3px;"><i class="fab fa-facebook-f"
@@ -29,7 +29,7 @@
                     <span class="logo-responsive"><img src="{{ asset(setting('logonav')) }}" height="70"></span>
                 </a>
             </div>
-			
+
             {{-- <div class="header-extras" style="float: right; margin-top: -5px;">
                 <div class="header-extras mt-3 social-icons social-icons-large social-icons-border social-icons-rounded social-icons-colored-hover"
                     style="padding: 5px;">
